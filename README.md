@@ -2,6 +2,13 @@ It is simply a WEB 3 Exploration APP that let you view NFTS
 
 (News about web 3 are COMING SOON)
 
+TO DO :
+
+Head to m3o.com and signup for a free account.
+Generate an API key on the Settings page.
+Browse the NFT API on the Explore page.
+Call any API using your token in the Authorization: Bearer [Token] header and 'https://api.m3o.com/v1/nft/Assets' url.
+
 
 
 ![Screenshot from 2021-12-22 18-43-24](https://user-images.githubusercontent.com/64710848/147118392-e203926a-c0b4-4244-8559-e169f5b26e33.png)
