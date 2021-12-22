@@ -7,7 +7,7 @@ TO DO :
 Head to m3o.com and signup for a free account.
 Generate an API key on the Settings page.
 Browse the NFT API on the Explore page.
-Call any API using your token in the Authorization: Bearer [Token] header and 'https://api.m3o.com/v1/nft/Assets' url.
+Generate API key that you will use it in this project in a file main.dart
 
 
 
