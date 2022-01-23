@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import "package:flutter/material.dart";
 import 'package:animate_do/animate_do.dart';
 import "package:iconsax/iconsax.dart";
@@ -6,34 +7,16 @@ import "package:iconsax/iconsax.dart";
 // gibran alazka
 
 class BidPage extends StatefulWidget {
-  const BidPage({Key? key}) : super(key: key);
+  String image;
+  BidPage({required this.image, Key? key}) : super(key: key);
 
   @override
-  BidState createState() => BidState();
+  BidState createState() => BidState(image);
 }
 
 class BidState extends State<BidPage> {
-  // ignore: non_constant_identifier_names
-  List<dynamic> ChatData = [
-    {
-      "id": 0,
-      "type_message": "text",
-      "text": "hallo",
-      "is_outgoing": false,
-    },
-    {
-      "id": 1,
-      "type_message": "text",
-      "text": "hallo tod",
-      "is_outgoing": false,
-    },
-    {
-      "id": 2,
-      "type_message": "text",
-      "text": "hallo guys",
-      "is_outgoing": true,
-    },
-  ];
+  String imageUrl;
+  BidState(this.imageUrl);
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
@@ -41,6 +24,7 @@ class BidState extends State<BidPage> {
     final getWidht = mediaQuery.size.width;
     final appbarHeight = mediaQuery.padding.top;
     final bottomPadding = mediaQuery.padding.bottom;
+
     return Scaffold(
       backgroundColor: const Color(0xffF0F8FF),
       appBar: PreferredSize(
@@ -105,8 +89,7 @@ class BidState extends State<BidPage> {
                         fit: BoxFit.fill,
                         width: getWidht,
                         height: 400,
-                        image: const NetworkImage(
-                            'https://lh3.googleusercontent.com/eLJClb3zsprPqksgQdgcF_feO28Q0H6FbDNVZHgoRDk22PnRN8c5Rxn816MqbAKzBa2OP8oYDCe6JeCDg3XxNf9lrAJuVW8ktK_7YjI=w600'),
+                        image: NetworkImage(imageUrl),
                       ),
                     ),
                     Positioned(
@@ -327,4 +310,11 @@ class BidState extends State<BidPage> {
           FloatingActionButtonLocation.miniCenterFloat,
     );
   }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(StringProperty('image', imageUrl));
+  }
+  
 }
