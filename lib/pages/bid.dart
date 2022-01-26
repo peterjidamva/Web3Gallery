@@ -8,15 +8,29 @@ import "package:iconsax/iconsax.dart";
 
 class BidPage extends StatefulWidget {
   String image;
-  BidPage({required this.image, Key? key}) : super(key: key);
+  String category;
+  String name;
+  String desc;
+
+  BidPage(
+      {required this.image,
+      required this.category,
+      required this.name,
+      required this.desc,
+      Key? key})
+      : super(key: key);
 
   @override
-  BidState createState() => BidState(image);
+  // ignore: no_logic_in_create_state
+  BidState createState() => BidState(image, category, name, desc);
 }
 
 class BidState extends State<BidPage> {
   String imageUrl;
-  BidState(this.imageUrl);
+  String name;
+  String category;
+  String desc;
+  BidState(this.imageUrl, this.category, this.name, this.desc);
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
@@ -106,9 +120,9 @@ class BidState extends State<BidPage> {
                           color: Colors.grey,
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: const Text(
-                          "ART",
-                          style: TextStyle(
+                        child: Text(
+                          category,
+                          style: const TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w700,
                             fontSize: 15,
@@ -209,12 +223,16 @@ class BidState extends State<BidPage> {
                 ),
                 Row(
                   children: [
-                    const Text(
-                      "Bored APe #7845\nBAYC",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 25,
+                    Container(
+                      width:MediaQuery.of(context).size.width * 0.5,
+                      
+                      child: Text(
+                        name,
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25,
+                        ),
                       ),
                     ),
                     const Spacer(),
@@ -273,9 +291,9 @@ class BidState extends State<BidPage> {
                 const SizedBox(
                   height: 20.0,
                 ),
-                const Text(
-                  "Simple NFT:v with abstract art and cool meaning\nthat makes this work perfect.",
-                  style: TextStyle(
+                Text(
+                  desc,
+                  style: const TextStyle(
                     color: Colors.grey,
                     fontWeight: FontWeight.w500,
                     fontSize: 15,
@@ -316,5 +334,4 @@ class BidState extends State<BidPage> {
     super.debugFillProperties(properties);
     properties.add(StringProperty('image', imageUrl));
   }
-  
 }

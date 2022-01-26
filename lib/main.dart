@@ -543,6 +543,9 @@ class _ExpensesPageState extends State<MainPage> {
                                     builder: (context) => BidPage(
                                       image: snapshot.data!.assets![i].imageUrl
                                           .toString(),
+                                          category:snapshot.data!.assets![i].contract!.type.toString(),
+                                          name:snapshot.data!.assets![i].name.toString(),
+                                          desc:snapshot.data!.assets![i].contract!.description.toString(),
                                     ),
                                   ),
                                 );
