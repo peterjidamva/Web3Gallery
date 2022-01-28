@@ -611,8 +611,8 @@ class _ExpensesPageState extends State<MainPage> {
                                               borderRadius:
                                                   BorderRadius.circular(10),
                                             ),
-                                            child: const Text(
-                                              "08",
+                                            child:Text(
+                                              snapshot.data!.assets![i].collection!.createdAt.toString().substring(0,4),
                                               style: TextStyle(
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.w700,
@@ -641,8 +641,8 @@ class _ExpensesPageState extends State<MainPage> {
                                               borderRadius:
                                                   BorderRadius.circular(10),
                                             ),
-                                            child: const Text(
-                                              "43",
+                                            child:  Text(
+                                               snapshot.data!.assets![i].collection!.createdAt.toString().substring(5,7),
                                               style: TextStyle(
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.w700,
@@ -671,8 +671,8 @@ class _ExpensesPageState extends State<MainPage> {
                                               borderRadius:
                                                   BorderRadius.circular(10),
                                             ),
-                                            child: const Text(
-                                              "26",
+                                            child:Text(
+                                               snapshot.data!.assets![i].collection!.createdAt.toString().substring(8,10),
                                               style: TextStyle(
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.w700,
