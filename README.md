@@ -10,8 +10,7 @@ Browse the NFT API on the Explore page.
 Generate API key that you will use it in this project in a file main.dart
 
 
-
-![Screenshot from 2021-12-22 18-43-24](https://user-images.githubusercontent.com/64710848/147118392-e203926a-c0b4-4244-8559-e169f5b26e33.png)
+![61](https://user-images.githubusercontent.com/64710848/152833562-bdb99781-0824-4578-8441-e9b3735f6fa2.png)
 
 
 ![Screenshot from 2021-12-22 18-43-42](https://user-images.githubusercontent.com/64710848/147118400-af57cf1f-4d00-4f64-bd55-9d05f99857bf.png)
