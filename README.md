@@ -19,7 +19,16 @@ Generate API key that you will use it in this project in a file main.dart
 
 ![Screenshot from 2021-12-22 18-44-19](https://user-images.githubusercontent.com/64710848/147118406-94f41436-e773-43e0-a61a-9fb01fd52034.png)
 
-Still on IMPROVEMENTS 
+
+Added Wallet connect 
 
 
-UI CREDITS https://github.com/azkadev/nft_app  
+![connect01](https://user-images.githubusercontent.com/64710848/152830972-c3cebbb0-732f-41ba-a0bf-1c52026d3eda.png)
+
+
+![connect3](https://user-images.githubusercontent.com/64710848/152831012-36147df1-ce7c-4cf1-8932-f80b94269f5b.png)
+
+
+![connect01](https://user-images.githubusercontent.com/64710848/152831025-7873eb5e-9a11-465b-9a24-81477ed8f25c.png)
+
+
