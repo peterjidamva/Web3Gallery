@@ -38,6 +38,11 @@ dependencies:
   fl_chart: ^0.40.2
   animate_do: ^2.0.0
   http: ^0.13.4
+  wallet_connect: ^1.0.2
+  flutter_inappwebview: ^5.3.2
+  eth_sig_util: ^0.0.6
+  shared_preferences: ^2.0.13
+  web3dart: ^2.3.3
 
 dev_dependencies:
   flutter_test:
