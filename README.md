@@ -29,6 +29,7 @@ Added Wallet connect
 ![Screenshot from 2022-02-07 19-39-46](https://user-images.githubusercontent.com/64710848/152831942-182f5c8c-1b82-464d-a721-15bea87e0d3b.png)
 
 
+MORE ARE COMMING 
 
 
 
