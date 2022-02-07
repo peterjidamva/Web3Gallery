@@ -22,13 +22,15 @@ Generate API key that you will use it in this project in a file main.dart
 
 Added Wallet connect 
 
+![122](https://user-images.githubusercontent.com/64710848/152831895-b25b3277-ceca-4689-82f2-0659f0d00250.png)
 
-![connect01](https://user-images.githubusercontent.com/64710848/152830972-c3cebbb0-732f-41ba-a0bf-1c52026d3eda.png)
-
-
-![connect3](https://user-images.githubusercontent.com/64710848/152831012-36147df1-ce7c-4cf1-8932-f80b94269f5b.png)
+![Screenshot from 2022-02-07 19-39-25](https://user-images.githubusercontent.com/64710848/152831914-0a9b795a-313c-4142-ad92-f3e05db27f82.png)
 
 
-![connect01](https://user-images.githubusercontent.com/64710848/152831025-7873eb5e-9a11-465b-9a24-81477ed8f25c.png)
+![Screenshot from 2022-02-07 19-39-46](https://user-images.githubusercontent.com/64710848/152831942-182f5c8c-1b82-464d-a721-15bea87e0d3b.png)
+
+
+
+
 
 
