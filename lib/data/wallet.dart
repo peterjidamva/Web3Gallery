@@ -355,7 +355,7 @@ class _WalletPageState extends State<WalletPage> {
     BigInt gasPrice = BigInt.parse(ethereumTransaction.gasPrice ?? '0');
     try {
       final abiUrl =
-          'https://api.polygonscan.com/api?module=contract&action=getabi&address=${ethereumTransaction.to}&apikey=';
+          'https://api.polygonscan.com/api?module=contract&action=getabi&address=${ethereumTransaction.to}&apikey=API KEY HERE';
       final res = await http.get(Uri.parse(abiUrl));
       final Map<String, dynamic> resMap = jsonDecode(res.body);
       final abi = ContractAbi.fromJson(resMap['result'], '');
@@ -370,11 +370,6 @@ class _WalletPageState extends State<WalletPage> {
         debugPrint("isNotEmpty");
         contractFunction = maibiFunctions.first;
         debugPrint("function ${contractFunction.name}");
-        // contractFunction.parameters.forEach((element) {
-        //   debugPrint("params ${element.name} ${element.type.name}");
-        // });
-        // final params = dataBytes.sublist(4).toList();
-        // debugPrint("params $params ${params.length}");
       }
       if (gasPrice == BigInt.zero) {
         gasPrice = await _web3client.estimateGas();
