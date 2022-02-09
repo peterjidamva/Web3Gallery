@@ -240,13 +240,13 @@ class Collection {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['name'] = this.name;
-    data['description'] = this.description;
-    data['slug'] = this.slug;
-    data['image_url'] = this.imageUrl;
-    data['created_at'] = this.createdAt;
-    data['payout_address'] = this.payoutAddress;
+    final Map<String, dynamic> data = Map<String, dynamic>();
+    data['name'] = name;
+    data['description'] = description;
+    data['slug'] = slug;
+    data['image_url'] = imageUrl;
+    data['created_at'] = createdAt;
+    data['payout_address'] = payoutAddress;
     return data;
   }
 }
@@ -266,9 +266,9 @@ class Creator {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['username'] = this.username;
-    data['profile_url'] = this.profileUrl;
-    data['address'] = this.address;
+    data['username'] = username;
+    data['profile_url'] = profileUrl;
+    data['address'] = address;
     return data;
   }
 }
@@ -309,15 +309,15 @@ class LastSale {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['asset_token_id'] = this.assetTokenId;
-    data['asset_decimals'] = this.assetDecimals;
-    data['event_type'] = this.eventType;
-    data['event_timestamp'] = this.eventTimestamp;
-    data['total_price'] = this.totalPrice;
-    data['quantity'] = this.quantity;
-    data['created_at'] = this.createdAt;
-    data['transaction'] = this.transaction;
-    data['payment_token'] = this.paymentToken;
+    data['asset_token_id'] = assetTokenId;
+    data['asset_decimals'] = assetDecimals;
+    data['event_type'] = eventType;
+    data['event_timestamp'] = eventTimestamp;
+    data['total_price'] = totalPrice;
+    data['quantity'] = quantity;
+    data['created_at'] = createdAt;
+    data['transaction'] = transaction;
+    data['payment_token'] = paymentToken;
     return data;
   }
 }

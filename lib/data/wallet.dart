@@ -9,14 +9,13 @@ import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:wallet_connect/wallet_connect.dart';
-import 'package:web3_gallery/data/qrscan.dart';
-// import 'package:wallet_connect_example/eth_conversions.dart';
-// import 'package:wallet_connect_example/qr_scan_view.dart';
 import 'package:web3dart/crypto.dart';
 import 'package:web3dart/web3dart.dart';
 
 class WalletPage extends StatefulWidget {
-  WalletPage({Key? key,}) : super(key: key);
+  const WalletPage({
+    Key? key,
+  }) : super(key: key);
 
   // final String title;
 
@@ -74,100 +73,7 @@ class _WalletPageState extends State<WalletPage> {
 
   @override
   Widget build(BuildContext context) {
-    return
-        // appBar: AppBar(
-        //   title: Text(widget.title),
-        //   actions: [
-        //     PopupMenuButton<MenuItems>(
-        //       onSelected: (item) {
-        //         switch (item) {
-        //           case MenuItems.PREVIOUS_SESSION:
-        //             _connectToPreviousSession();
-        //             break;
-        //           case MenuItems.KILL_SESSION:
-        //             _wcClient.killSession();
-        //             break;
-        //           case MenuItems.SCAN_QR:
-        //             Navigator.push(
-        //               context,
-        //               MaterialPageRoute(builder: (_) => const QRScanView()),
-        //             ).then((value) {
-        //               if (value != null) {
-        //                 _qrScanHandler(value);
-        //               }
-        //             });
-        //             break;
-        //           case MenuItems.PASTE_CODE:
-        //             showGeneralDialog(
-        //                 context: context,
-        //                 barrierDismissible: true,
-        //                 barrierLabel: 'Paste Code',
-        //                 pageBuilder: (context, _, __) {
-        //                   return SimpleDialog(
-        //                     title: Text('Paste code to connect'),
-        //                     titlePadding:
-        //                         const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, .0),
-        //                     contentPadding: const EdgeInsets.all(16.0),
-        //                     children: [
-        //                       TextField(
-        //                         controller: _textEditingController,
-        //                         decoration: InputDecoration(
-        //                           border: OutlineInputBorder(),
-        //                           label: Text('Enter Code'),
-        //                         ),
-        //                       ),
-        //                       const SizedBox(height: 16.0),
-        //                       Row(
-        //                         mainAxisAlignment: MainAxisAlignment.end,
-        //                         children: [
-        //                           TextButton(
-        //                             onPressed: () => Navigator.pop(context),
-        //                             child: Text('CONTINUE'),
-        //                           ),
-        //                         ],
-        //                       ),
-        //                     ],
-        //                   );
-        //                 }).then((_) {
-        //               if (_textEditingController.text.isNotEmpty) {
-        //                 _qrScanHandler(_textEditingController.text);
-        //                 _textEditingController.clear();
-        //               }
-        //             });
-        //             break;
-        //           case MenuItems.CLEAR_CACHE:
-        //             _webViewController.clearCache();
-        //             break;
-        //         }
-        //       },
-        //       itemBuilder: (_) {
-        //         return [
-        //           PopupMenuItem(
-        //             value: MenuItems.PREVIOUS_SESSION,
-        //             child: Text('Connect Previous Session'),
-        //           ),
-        //           PopupMenuItem(
-        //             value: MenuItems.KILL_SESSION,
-        //             child: Text('Kill Session'),
-        //           ),
-        //           PopupMenuItem(
-        //             value: MenuItems.SCAN_QR,
-        //             child: Text('Connect via QR'),
-        //           ),
-        //           PopupMenuItem(
-        //             value: MenuItems.PASTE_CODE,
-        //             child: Text('Connect via Code'),
-        //           ),
-        //           PopupMenuItem(
-        //             value: MenuItems.CLEAR_CACHE,
-        //             child: Text('Clear Cache'),
-        //           ),
-        //         ];
-        //       },
-        //     ),
-        //   ],
-        // ),
-        InAppWebView(
+    return InAppWebView(
       initialUrlRequest:
           URLRequest(url: Uri.parse('https://example.walletconnect.org')),
       initialOptions: InAppWebViewGroupOptions(
@@ -449,7 +355,7 @@ class _WalletPageState extends State<WalletPage> {
     BigInt gasPrice = BigInt.parse(ethereumTransaction.gasPrice ?? '0');
     try {
       final abiUrl =
-          'https://api.polygonscan.com/api?module=contract&action=getabi&address=${ethereumTransaction.to}&apikey=BCER1MXNFHP1TVE93CMNVKC5J4FV8R4CPR';
+          'https://api.polygonscan.com/api?module=contract&action=getabi&address=${ethereumTransaction.to}&apikey=';
       final res = await http.get(Uri.parse(abiUrl));
       final Map<String, dynamic> resMap = jsonDecode(res.body);
       final abi = ContractAbi.fromJson(resMap['result'], '');
