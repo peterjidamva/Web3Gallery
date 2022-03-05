@@ -11,18 +11,20 @@ class BidPage extends StatefulWidget {
   String category;
   String name;
   String desc;
+  String date;
 
   BidPage(
       {required this.image,
       required this.category,
       required this.name,
       required this.desc,
+      required this.date,
       Key? key})
       : super(key: key);
 
   @override
   // ignore: no_logic_in_create_state
-  BidState createState() => BidState(image, category, name, desc);
+  BidState createState() => BidState(image, category, name, desc, date);
 }
 
 class BidState extends State<BidPage> {
@@ -30,7 +32,8 @@ class BidState extends State<BidPage> {
   String name;
   String category;
   String desc;
-  BidState(this.imageUrl, this.category, this.name, this.desc);
+  String date;
+  BidState(this.imageUrl, this.category, this.name, this.desc, this.date);
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
@@ -146,9 +149,9 @@ class BidState extends State<BidPage> {
                               color: Colors.grey,
                               borderRadius: BorderRadius.circular(10),
                             ),
-                            child: const Text(
-                              "08",
-                              style: TextStyle(
+                            child: Text(
+                              date.toString().substring(0, 4),
+                              style:const TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w700,
                                 fontSize: 15,
@@ -175,9 +178,9 @@ class BidState extends State<BidPage> {
                               color: Colors.grey,
                               borderRadius: BorderRadius.circular(10),
                             ),
-                            child: const Text(
-                              "43",
-                              style: TextStyle(
+                            child: Text(
+                              date.toString().substring(5,7 ),
+                              style:const TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w700,
                                 fontSize: 15,
@@ -204,9 +207,9 @@ class BidState extends State<BidPage> {
                               color: Colors.grey,
                               borderRadius: BorderRadius.circular(10),
                             ),
-                            child: const Text(
-                              "26",
-                              style: TextStyle(
+                            child:  Text(
+                              date.toString().substring(8, 10),
+                              style:const TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w700,
                                 fontSize: 15,
@@ -224,8 +227,7 @@ class BidState extends State<BidPage> {
                 Row(
                   children: [
                     Container(
-                      width:MediaQuery.of(context).size.width * 0.5,
-                      
+                      width: MediaQuery.of(context).size.width * 0.5,
                       child: Text(
                         name,
                         style: const TextStyle(

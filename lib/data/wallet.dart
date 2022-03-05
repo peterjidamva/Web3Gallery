@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'dart:convert';
-
 import 'package:eth_sig_util/eth_sig_util.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -355,7 +354,7 @@ class _WalletPageState extends State<WalletPage> {
     BigInt gasPrice = BigInt.parse(ethereumTransaction.gasPrice ?? '0');
     try {
       final abiUrl =
-          'https://api.polygonscan.com/api?module=contract&action=getabi&address=${ethereumTransaction.to}&apikey=API KEY HERE';
+          'https://api.polygonscan.com/api?module=contract&action=getabi&address=${ethereumTransaction.to}&apikey=';
       final res = await http.get(Uri.parse(abiUrl));
       final Map<String, dynamic> resMap = jsonDecode(res.body);
       final abi = ContractAbi.fromJson(resMap['result'], '');
