@@ -43,6 +43,7 @@ dependencies:
   eth_sig_util: ^0.0.6
   shared_preferences: ^2.0.13
   web3dart: ^2.3.3
+  sqflite: ^2.0.2
 
 dev_dependencies:
   flutter_test:

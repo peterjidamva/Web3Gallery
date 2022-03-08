@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors
 import 'dart:io';
 import "package:flutter/material.dart";
 import 'package:animate_do/animate_do.dart';
@@ -7,12 +6,13 @@ import 'package:iconsax/iconsax.dart';
 import 'package:web3_gallery/classes/assets.dart';
 import 'package:web3_gallery/data/wallet.dart';
 import 'pages/bid.dart';
-import '';
+
 
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
+//thi is is if you have troubles in fetching from api
 class MyHttpOverrides extends HttpOverrides {
   @override
   HttpClient createHttpClient(SecurityContext? context) {
