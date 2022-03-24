@@ -15,7 +15,7 @@ var todayDate = DateTime.now();
 Future<CryptoPairs> fetchCryptoPairs() async {
   var headers = {'Authorization': 'Bearer '};
   
-  var uri = Uri.parse('https://api.m3o.com/v1/nft/Assets');
+  var uri = Uri.parse('https://api.m3o.com/v1/crypto/Symbols');
   var response = await http.get(uri, headers: headers);
 
   if (response.statusCode == 200) {
