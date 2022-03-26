@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+
 class MyHttpOverrides extends HttpOverrides {
   @override
   HttpClient createHttpClient(SecurityContext? context) {
@@ -14,7 +15,7 @@ class MyHttpOverrides extends HttpOverrides {
 var todayDate = DateTime.now();
 Future<CryptoPairs> fetchCryptoPairs() async {
   var headers = {'Authorization': 'Bearer '};
-  
+
   var uri = Uri.parse('https://api.m3o.com/v1/crypto/Symbols');
   var response = await http.get(uri, headers: headers);
 
@@ -82,8 +83,20 @@ class ViewAvailableCryptoPairs extends StatefulWidget {
 }
 
 class _ViewAvailableCryptoPairsState extends State<ViewAvailableCryptoPairs> {
+  late Future<CryptoPairs> futureCryptoPairs;
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return FutureBuilder<CryptoPairs>(
+        future: futureCryptoPairs,
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            return SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                padding: const EdgeInsets.only(top: 5, bottom: 5, right: 5),
+                child: Text(snapshot.data.toString()));
+          } else {
+            return const Text("no data");
+          }
+        });
   }
 }
