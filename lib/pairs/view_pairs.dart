@@ -41,15 +41,15 @@ class CryptoPairs {
     if (json['symbols'] != null) {
       symbols = <Symbols>[];
       json['symbols'].forEach((v) {
-        symbols!.add(new Symbols.fromJson(v));
+        symbols!.add(Symbols.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.symbols != null) {
-      data['symbols'] = this.symbols!.map((v) => v.toJson()).toList();
+    if (symbols != null) {
+      data['symbols'] = symbols!.map((v) => v.toJson()).toList();
     }
     return data;
   }
@@ -68,8 +68,8 @@ class Symbols {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['symbol'] = this.symbol;
-    data['name'] = this.name;
+    data['symbol'] = symbol;
+    data['name'] = name;
     return data;
   }
 }
