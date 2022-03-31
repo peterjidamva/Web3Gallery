@@ -93,7 +93,13 @@ class _ViewAvailableCryptoPairsState extends State<ViewAvailableCryptoPairs> {
             return SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 padding: const EdgeInsets.only(top: 5, bottom: 5, right: 5),
-                child: Text(snapshot.data.toString()));
+                child: Column(
+                  children: [
+
+                    Text(snapshot.data!.symbols.toString()),
+                                      
+                  ],
+                ));
           } else {
             return const Text("no data");
           }
