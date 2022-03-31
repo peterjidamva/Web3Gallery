@@ -681,7 +681,7 @@ class _ExpensesPageState extends State<MainPage> {
                   label: "",
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Iconsax.chart, color: Colors.grey),
+                  icon: Icon(Icons.newspaper, color: Colors.grey),
                   label: "",
                 ),
                 BottomNavigationBarItem(
