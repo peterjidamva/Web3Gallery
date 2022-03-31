@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:web3_gallery/classes/assets.dart';
 import 'package:web3_gallery/data/wallet.dart';
+import 'package:web3_gallery/pairs/view_pairs.dart';
 import 'pages/bid.dart';
 
 import 'dart:convert';
@@ -689,7 +690,15 @@ class _ExpensesPageState extends State<MainPage> {
                 ),
               ],
               onTap: (int i) => {
-                if (i == 3)
+                if (i == 1)
+                  {
+                    setState(() {
+                      buttonClicked = true;
+                      activePage = const ViewAvailableCryptoPairs();
+                    })
+                  },
+               
+              if (i == 3)
                   {
                     setState(() {
                       buttonClicked = true;
