@@ -13,8 +13,9 @@ class MyHttpOverrides extends HttpOverrides {
 }
 
 var todayDate = DateTime.now();
+
 Future<CryptoPairs> fetchCryptoPairs() async {
-  var headers = {'Authorization': 'Bearer '};
+  var headers = {'Authorization': 'Bearer MGI1NTNlNmEtYTdmYy00MGNkLWIxZTgtNGU3YmE2MDljMWE1'};
 
   var uri = Uri.parse('https://api.m3o.com/v1/crypto/Symbols');
   var response = await http.get(uri, headers: headers);
@@ -84,7 +85,13 @@ class ViewAvailableCryptoPairs extends StatefulWidget {
 
 class _ViewAvailableCryptoPairsState extends State<ViewAvailableCryptoPairs> {
   late Future<CryptoPairs> futureCryptoPairs;
-  @override
+ @override
+  void initState() {
+    super.initState();
+    futureCryptoPairs = 
+    fetchCryptoPairs();
+  }
+
   Widget build(BuildContext context) {
     return FutureBuilder<CryptoPairs>(
         future: futureCryptoPairs,
