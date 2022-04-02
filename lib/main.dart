@@ -688,7 +688,7 @@ class _ExpensesPageState extends State<MainPage> {
                 ),
               ],
               onTap: (int i) => {
-                if (i == 2)
+                if (i == 1)
                   {
                     setState(() {
                       buttonClicked = true;
