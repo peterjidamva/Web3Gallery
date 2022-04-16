@@ -10,7 +10,7 @@ import 'pages/bid.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-//thi is is if you have troubles in fetching from api
+//(😑😑not good for production)this is is if you have troubles in fetching from api
 class MyHttpOverrides extends HttpOverrides {
   @override
   HttpClient createHttpClient(SecurityContext? context) {
